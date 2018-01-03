@@ -14,7 +14,7 @@ if [ -z "${OPENVPN_NETNAME}" ]; then
 fi
 
 echo "#!/bin/sh" > /usr/local/sbin/openvpn
-echo "exec /usr/sbin/openvpn --user ${OPENVPN_USER} --status /run/openvpn/${OPENVPN_NETNAME}.status 10 --cd /etc/openvpn --config /etc/openvpn/${OPENVPN_NETNAME}.conf" >> /usr/local/sbin/openvpn
+echo "exec /usr/sbin/openvpn --user ${OPENVPN_USER} --cd /etc/openvpn --config /etc/openvpn/${OPENVPN_NETNAME}.conf" >> /usr/local/sbin/openvpn
 
 chown --reference=/usr/sbin/openvpn /usr/local/sbin/openvpn
 chmod --reference=/usr/sbin/openvpn /usr/local/sbin/openvpn
