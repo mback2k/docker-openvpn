@@ -13,7 +13,11 @@ if [ -z "${OPENVPN_NETNAME}" ]; then
     exit 2
 fi
 
-OPENVPN_KEYNAME=`dnssec-keygen -a HMAC-MD5 -b 512 -n USER ${OPENVPN_NETNAME}-nsupdate`
+mkdir /etc/nsupdate
+chown ${OPENVPN_USER} /etc/nsupdate
+chmod 755 /etc/nsupdate
+
+OPENVPN_KEYNAME=`dnssec-keygen -a HMAC-MD5 -b 512 -n USER /etc/nsupdate/${OPENVPN_NETNAME}-nsupdate`
 
 chown ${OPENVPN_USER} ${OPENVPN_KEYNAME}.private ${OPENVPN_KEYNAME}.key
 chmod 600 ${OPENVPN_KEYNAME}.private
