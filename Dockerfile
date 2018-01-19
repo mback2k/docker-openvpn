@@ -4,7 +4,7 @@ MAINTAINER Marc Hoersken "info@marc-hoersken.de"
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        net-tools bind9utils && \
+        net-tools && \
     apt-get install -y --no-install-recommends \
         -t stretch-backports openvpn && \
     apt-get clean
