@@ -18,3 +18,5 @@ echo "exec /usr/sbin/openvpn --user ${OPENVPN_USER} --cd /etc/openvpn --config /
 
 chown --reference=/usr/sbin/openvpn /usr/local/sbin/openvpn
 chmod --reference=/usr/sbin/openvpn /usr/local/sbin/openvpn
+
+exit 0
