@@ -1,7 +1,5 @@
 FROM mback2k/debian:stretch-backports
 
-MAINTAINER Marc Hoersken "info@marc-hoersken.de"
-
 RUN adduser --disabled-password --disabled-login --system --group \
         --uid 1194 --home /etc/openvpn openvpn
 
