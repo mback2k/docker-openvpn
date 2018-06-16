@@ -5,7 +5,7 @@ RUN adduser --disabled-password --disabled-login --system --group \
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        net-tools dnsutils && \
+        net-tools dnsutils pcregrep && \
     apt-get install -y --no-install-recommends \
         -t stretch-backports openvpn && \
     apt-get clean
