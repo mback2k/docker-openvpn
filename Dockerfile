@@ -15,6 +15,7 @@ EXPOSE 1194/tcp 1194/udp
 VOLUME /etc/openvpn
 
 ENV OPENVPN_USER=openvpn
+ENV OPENVPN_GROUP=openvpn
 ENV OPENVPN_NETNAME=
 
 ADD docker-entrypoint.d/ /run/docker-entrypoint.d/
