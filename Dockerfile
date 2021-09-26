@@ -1,4 +1,4 @@
-FROM mback2k/debian:stretch-backports
+FROM ghcr.io/mback2k/docker-debian/stretch-backports:latest
 
 RUN adduser --disabled-password --disabled-login --system --group \
         --uid 1194 --home /etc/openvpn openvpn
